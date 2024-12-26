@@ -456,3 +456,4 @@
 /Users/mihirmistry/Desktop/code/dotnet/firstmvc-expense/obj/Debug/net9.0/firstmvc.pdb
 /Users/mihirmistry/Desktop/code/dotnet/firstmvc-expense/obj/Debug/net9.0/firstmvc.genruntimeconfig.cache
 /Users/mihirmistry/Desktop/code/dotnet/firstmvc-expense/obj/Debug/net9.0/ref/firstmvc.dll
+/Users/mihirmistry/Desktop/code/dotnet/firstmvc-expense/obj/Debug/net9.0/firstmvc.sourcelink.json
