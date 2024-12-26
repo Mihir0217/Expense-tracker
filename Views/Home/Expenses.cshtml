@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Expenses";
+}
+
+ @model List<Expense>
+
+<div class="text-center">
+    <h1 class="display-5">Expenses</h1>
+    <br>
+    <h3>Total Expenses: @Model.Sum(x => x.Value) RS</h3>
+
+    <br>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Value</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var i in Model)
+                {
+                    <tr>
+                        <td>@i.Id</td>
+                        <td>@i.Value</td>
+                        <td>@i.Description</td>
+                        <td>@i.Date.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <a class="btn btn-primary" asp-controller="Home" asp-action="CreateEditExp"
+                                asp-route-id="@i.Id">Edit</a>
+                            <a class="btn btn-danger" asp-controller="Home" asp-action="DeleteExp"
+                                asp-route-id="@i.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <a class="btn btn-warning" asp-controller="Home" asp-action="CreateEditExp">Add Expenses</a>
+    </div>
+</div>
